@@ -5,35 +5,53 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#     - uses: actions/checkout@v2
+#     - name: Install dependencies
+#       run: npm install
+#     - name: Build
+#       run: npm run build
+
+#   deploy:
+#     needs: build
+#     runs-on: ubuntu-latest
+#     steps:
+#     - name: Checkout code
+#       uses: actions/checkout@v2
+#     - name: Build and deploy
+#       run: |
+#         REPO_NAME=${{ github.event.repository.name }}
+#         echo "Deploying to https://${{ github.actor }}.github.io/${REPO_NAME}/"
+#     - name: Deploy to GitHub Pages
+#       uses: JamesIves/github-pages-deploy-action@4.1.3
+#       with:
+#         access-token: ${{ secrets.TIMETAC_CLIENT }}
+#         branch: gh-pages
+#         folder: build
+#     # - name: Build and deploy
+#     #   uses: peaceiris/actions-gh-pages@v3
+#     #   with:
+#     #     github_token: ${{ secrets.TIMETAC_CLIENT }}
+#     #     publish_dir: ./build
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Install dependencies
-      run: npm install
-    - name: Build
-      run: npm run build
-
-  deploy:
-    needs: build
+  build-and-deploy:
+    concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-    - name: Build and deploy
-      run: |
-        REPO_NAME=${{ github.event.repository.name }}
-        echo "Deploying to https://${{ github.actor }}.github.io/${REPO_NAME}/"
-    - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@4.1.3
-      with:
-        access-token: ${{ secrets.TIMETAC_CLIENT }}
-        branch: gh-pages
-        folder: build
-    # - name: Build and deploy
-    #   uses: peaceiris/actions-gh-pages@v3
-    #   with:
-    #     github_token: ${{ secrets.TIMETAC_CLIENT }}
-    #     publish_dir: ./build
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install and Build
+        run: |
+          npm ci
+          npm run build
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
