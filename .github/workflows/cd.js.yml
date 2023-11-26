@@ -33,7 +33,7 @@ jobs:
     #     branch: gh-pages
     #     folder: build
     - name: Build and deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.TIMETAC_CLIENT }}
-          publish_dir: ./build
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.TIMETAC_CLIENT }}
+        publish_dir: ./build
