@@ -24,7 +24,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Build and deploy
       run: |
-        REPO_NAME: ${{ github.event.repository.name }}
+        REPO_NAME=${{ github.event.repository.name }}
         echo "Deploying to https://${{ github.actor }}.github.io/${REPO_NAME}/"
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.3
