@@ -1,4 +1,5 @@
 import LoadingButton from '@mui/lab/LoadingButton';
+import SaveIcon from '@mui/icons-material/Save';
 
 const MuiLoadingButton = ({
     onClick,
@@ -11,6 +12,7 @@ const MuiLoadingButton = ({
             onClick={onClick}
             loading={loading}
             loadingPosition="start"
+            startIcon={<SaveIcon />}
             variant="contained"
             sx={{ml: "auto", width: "25vh", fontSize: "16px", alignItems: "flex-end" }}
             size="small"

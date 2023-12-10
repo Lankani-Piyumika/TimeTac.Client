@@ -23,7 +23,7 @@ function App() {
       <BrowserRouter>
         <Routes>
         <Route path={"/register"} element={<SignUpMain />} />
-        <Route path={"/"} element={<SignIn />} />
+        <Route path={"/TimeTac.Client"} element={<SignIn />} />
         </Routes>
       </BrowserRouter>
     </div>
