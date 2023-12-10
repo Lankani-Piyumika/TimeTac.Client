@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-        <Route path={"/TimeTac.Client/register"} element={<SignUpMain />} />
+        <Route path={"/register"} element={<SignUpMain />} />
         <Route path={"/TimeTac.Client"} element={<SignIn />} />
         </Routes>
       </BrowserRouter>
