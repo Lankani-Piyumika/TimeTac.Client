@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Box } from '@mui/material';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
