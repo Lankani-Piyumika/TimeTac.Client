@@ -50,7 +50,7 @@ const SignIn = () => {
 
         <Stack direction={"row"} justifyContent={"space-between"}>
         <Typography variant="body2" style={{color: theme.palette.primary.light}}>New User?</Typography>
-        <Link variant="body2" href="register" style={{color: theme.palette.primary.light}} underline="always">Create Organization</Link>
+        <Link variant="body2" href="TimeTac.Client/register" style={{color: theme.palette.primary.light}} underline="always">Create Organization</Link>
         </Stack>      
         </Stack>
       </Stack>
