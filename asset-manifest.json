@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/TimeTac.Client/static/css/main.204649d3.css",
-    "main.js": "/TimeTac.Client/static/js/main.ef08243b.js",
+    "main.js": "/TimeTac.Client/static/js/main.14d69545.js",
     "static/js/787.1569c2dc.chunk.js": "/TimeTac.Client/static/js/787.1569c2dc.chunk.js",
     "index.html": "/TimeTac.Client/index.html",
     "main.204649d3.css.map": "/TimeTac.Client/static/css/main.204649d3.css.map",
-    "main.ef08243b.js.map": "/TimeTac.Client/static/js/main.ef08243b.js.map",
+    "main.14d69545.js.map": "/TimeTac.Client/static/js/main.14d69545.js.map",
     "787.1569c2dc.chunk.js.map": "/TimeTac.Client/static/js/787.1569c2dc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.204649d3.css",
-    "static/js/main.ef08243b.js"
+    "static/js/main.14d69545.js"
   ]
 }
