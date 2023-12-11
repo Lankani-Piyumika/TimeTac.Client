@@ -12,10 +12,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: ./TimeTac.Client
-
     strategy:
       matrix:
         node-version: [18.x]
