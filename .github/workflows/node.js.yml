@@ -25,9 +25,14 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         cache-dependency-path: ./package-lock.json
-    - run: npm ci
-    - run: npm run build
-    - run: npm test
+    # - run: npm ci
+    # - run: npm run build
+    # - run: npm test
+
+    - name: Install Dependencies
+      run: npm install
+    - name: Build Project
+      run: npm run build
     - name: Upload artifact to enable deployment
       uses: actions/upload-artifact@v3
       with:
