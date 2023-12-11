@@ -20,10 +20,10 @@ function App() {
 
   return !isLoading ? (
     <div className="App">
-      <HashRouter basename="/">
+      <HashRouter basename="/TimeTac.Client/">
         <Routes>
-        <Route path={"/TimeTac.Client/register"} element={<SignUpMain />} />
-        <Route path={"/TimeTac.Client"} element={<SignIn />} />
+        <Route path={"register"} element={<SignUpMain />} />
+        <Route path={"login"} element={<SignIn />} />
         </Routes>
       </HashRouter>
     </div>
