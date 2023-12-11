@@ -84,7 +84,7 @@ const SignIn = () => {
             </Typography>
             <Link
               variant="body2"
-              href="register"
+              href="/TimeTac.Client/register"
               style={{ color: theme.palette.primary.light }}
               underline="always"
             >
