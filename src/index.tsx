@@ -7,6 +7,7 @@ import { Provider } from 'react-redux'
 import { store } from './store/store';
 import { ThemeProvider } from "@mui/material/styles";
 import theme from './Theme';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -14,7 +15,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <ThemeProvider theme={theme}>
     <Provider store={store}>
+    <BrowserRouter basename={`/TimeTac.Client`}>
         <App />
+      </BrowserRouter>
     </Provider>
   </ThemeProvider>
 );
