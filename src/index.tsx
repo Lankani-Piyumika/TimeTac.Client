@@ -15,7 +15,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <ThemeProvider theme={theme}>
     <Provider store={store}>
-    <BrowserRouter basename={`/TimeTac.Client`}>
+    <BrowserRouter basename={`/TimeTac.Client/`}>
         <App />
       </BrowserRouter>
     </Provider>
