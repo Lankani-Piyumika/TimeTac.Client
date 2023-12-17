@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { Box } from '@mui/material';
-import { Route, Routes, HashRouter, } from 'react-router-dom';
+import { Route, Routes, } from 'react-router-dom';
 import MainLoader from './common/loaders/MainLoader';
 import SignIn from './pages/SignIn';
 import SignUpMain from './pages/SignupMain';
